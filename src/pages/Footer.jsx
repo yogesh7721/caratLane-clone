@@ -92,17 +92,24 @@ const Footer = () => {
                     </div>
                 </div>
 
-                {/* App Download card... */}
-                <div className="max-w-sm  mt-12 ml-25 right-12 bg-gradient-to-l bg-gray-400 to-gray-50 rounded-xl p-4 text-center shadow-sm">
+                {/*  card... */}
+                <div className="w-full max-w-sm mx-auto mt-12 bg-gradient-to-l from-gray-400 to-gray-50 rounded-xl p-4 text-center shadow-sm md:max-w-md lg:max-w-lg">
                     <p className="font-semibold text-lg mb-1">Download the CaratLane App</p>
-                    <p className="text-sm text-[#5f5f71] mb-4">Shop & Save more on app by redeeming xCLusive points</p>
-                    <div className="flex justify-center gap-4">
-                        <img src="https://freelogopng.com/images/all_img/1664287128google-play-store-logo-png.png" alt="Play Store" className="h-12" />
-                        <img src="https://freelogopng.com/images/all_img/1664287128google-play-store-logo-png.png" alt="Play Store" className="h-12" />
+                    <p className="text-sm text-[#5f5f71] mb-4">
+                        Shop & Save more on app by redeeming xCLusive points
+                    </p>
+                    <div className="flex justify-center gap-4 flex-wrap">
+                        <img src="https://freelogopng.com/images/all_img/1664287128google-play-store-logo-png.png" alt="Play Store"
+                            className="h-12"
+                        />
+                        <img src="https://freelogopng.com/images/all_img/1664287128google-play-store-logo-png.png" alt="App Store"
+                            className="h-12"
+                        />
                     </div>
                 </div>
 
-                {/* Bottom Icons... */}
+
+                {/* buttom icons... */}
                 <div className="mt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[#5f5f71]">
                     <div className="flex gap-6 text-2xl ml-32">
                         <div className="flex gap-4">

@@ -880,13 +880,13 @@ const ProductCard = () => {
     return (
         <div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-12 m-35">
-                {currentItems.map((item, index) => {
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-12 px-4">
+                {currentItems.map((item) => {
                     const currentImageIndex = proImages[item.id] ?? 0;
                     return (
                         <div
                             key={item.id}
-                            className="max-w-xs bg-white rounded-md border border-gray-200 shadow-md p-4 relative transition-transform duration-300 hover:scale-105 group"
+                            className="w-full bg-white rounded-lg border border-gray-200 shadow-md p-4 relative transition-transform duration-300 hover:scale-[1.02] group"
                         >
                             <div className="absolute top-4 left-4 bg-yellow-400 text-white text-xs font-bold px-2 py-1 rounded-md">
                                 {item.latest}
@@ -899,20 +899,26 @@ const ProductCard = () => {
                             <div className="flex items-center justify-center py-6 relative">
                                 <img src={item.img[currentImageIndex]} alt="Product" className="h-40 object-contain" />
 
-                                <button onClick={() => handlePrevImage(item.id, item.img.length)} className="absolute left-2 bottom-2 bg-white rounded-full p-1 shadow">
+                                <button
+                                    onClick={() => handlePrevImage(item.id, item.img.length)}
+                                    className="absolute left-2 bottom-2 bg-white rounded-full p-1 shadow"
+                                >
                                     <IoChevronBack className="text-gray-500 text-sm" />
                                 </button>
                                 <button
                                     onClick={() => handleNextImage(item.id, item.img.length)}
-                                    className="absolute left-8 bottom-2 bg-white rounded-full p-1 shadow" >
+                                    className="absolute left-8 bottom-2 bg-white rounded-full p-1 shadow"
+                                >
                                     <IoChevronForward className="text-gray-500 text-sm" />
                                 </button>
 
-                                <div className="absolute right-2 bottom-2 bg-white rounded-full p-1 shadow"> <FaRegCopy className="text-pink-500 text-sm" /> </div>
+                                <div className="absolute right-2 bottom-2 bg-white rounded-full p-1 shadow">
+                                    <FaRegCopy className="text-pink-500 text-sm" />
+                                </div>
                             </div>
 
                             <div className="text-gray-900 font-semibold text-lg">{item.price}</div>
-                            <div className="text-pink-400 text-xm font-medium mt-1">{item.text}</div>
+                            <div className="text-pink-400 text-sm font-medium mt-1">{item.text}</div>
                             <div className="text-gray-400 text-sm mt-1">{item.title}</div>
 
                             <div className="mt-4 hidden group-hover:flex items-center justify-between border border-purple-500 rounded-xl px-4 py-2 transition-all duration-300">
@@ -926,12 +932,14 @@ const ProductCard = () => {
                 })}
             </div>
 
+
             {/* Paginationss.... */}
             <div className="flex justify-center items-center gap-2 mt-8">
                 <button
                     onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
                     className="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300"
-                    disabled={currentPage === 1}>
+                    disabled={currentPage === 1}
+                >
                     Prev
                 </button>
 
@@ -942,7 +950,8 @@ const ProductCard = () => {
                         className={`px-3 py-1 rounded ${currentPage === i + 1
                             ? "bg-purple-500 text-white"
                             : "bg-gray-200 hover:bg-gray-300"
-                            }`} >
+                            }`}
+                    >
                         {i + 1}
                     </button>
                 ))}

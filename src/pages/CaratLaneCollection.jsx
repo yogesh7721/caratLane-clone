@@ -126,7 +126,7 @@ const CaratLaneCollection = () => {
 
             <div className="" style={{ scrollbarWidth: 'none' }}>
                 <div className="mt-10 px-2 sm:px-4">
-                    <div className="slider-container hide-scrollbar">
+                    <div className="slider-container overflow-hidden hide-scrollbar">
                         <Slider {...settings}>
                             {slider.map((src, index) => (
                                 <div key={index} className="px-2 sm:px-3 md:px-5">

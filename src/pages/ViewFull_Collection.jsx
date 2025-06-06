@@ -9,11 +9,14 @@ const ViewFull_Collection = () => {
     return (
         <div>
             <div className="flex flex-col md:flex-row p-4">
-                <div className="w-full md:w-[800px] max-w-full">
-                    <img src="https://cdn.caratlane.com/media/static/images/V4/2025/CL/03_MAR/Banner/bestsellers/02/Desktop_1740x850.jpg" alt="Main Banner"
-                        className="w-full h-auto shadow-md"
+                <div className="w-full max-w-screen-xl px-4 md:px-0 mx-auto">
+                    <img
+                        src="https://cdn.caratlane.com/media/static/images/V4/2025/CL/03_MAR/Banner/bestsellers/02/Desktop_1740x850.jpg"
+                        alt="Banner"
+                        className="w-full h-auto shadow-md rounded-md"
                     />
                 </div>
+
 
                 <div className="bg-gradient-to-b from-gray-400 to-gray-100 p-4 rounded-xl shadow-md mt-6 md:mt-0 md:ml-6 flex-1">
                     <div className="flex flex-wrap md:flex-nowrap gap-4 mt-12 justify-center">

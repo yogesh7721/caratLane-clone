@@ -10,7 +10,8 @@ const FooterDetails = () => {
     return <>
         <div>
             <footer className="bg-gray-100 text-gray-800 px-4 py-10 mt-10 ">
-                <div className="max-w-7xl mx-auto grid md:grid-cols-6 gap-8 text-sm">
+                <div className="mt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[#5f5f71]">
+
                     <div>
                         <h4 className="font-semibold mb-2">Know Your Jewellery</h4>
                         <ul className="space-y-1 text-[#5f5f71]">
@@ -35,7 +36,6 @@ const FooterDetails = () => {
                         </ul>
                     </div>
 
-
                     <div>
                         <h4 className="font-semibold mb-2">Customer Service</h4>
                         <ul className="space-y-1 text-[#5f5f71]">
@@ -43,7 +43,6 @@ const FooterDetails = () => {
                             <li>Order status</li>
                         </ul>
                     </div>
-
 
                     <div>
                         <h4 className="font-semibold mb-2">About Us</h4>
@@ -54,7 +53,6 @@ const FooterDetails = () => {
                             <li>Careers</li>
                         </ul>
                     </div>
-
 
                     <div className="col-span-2">
                         <h4 className="font-semibold mb-2">Contact Us</h4>
@@ -68,7 +66,6 @@ const FooterDetails = () => {
                             <p>Hr: <a className="text-pink-600" href="#">careers@caratlane.com</a></p>
                             <p>Grievance: <a className="text-pink-600" href="#">click here</a></p>
                         </div>
-
 
                         <div className="mt-4 flex gap-6 text-sm text-center ">
                             <div className="flex flex-col items-center">
@@ -95,17 +92,24 @@ const FooterDetails = () => {
                     </div>
                 </div>
 
-                {/* app download card... */}
-                <div className="max-w-sm  mt-12 ml-25 right-12 bg-gradient-to-l bg-gray-400 to-gray-50 rounded-xl p-4 text-center shadow-sm">
+                {/*  card... */}
+                <div className="w-full max-w-sm mx-auto mt-12 bg-gradient-to-l from-gray-400 to-gray-50 rounded-xl p-4 text-center shadow-sm md:max-w-md lg:max-w-lg">
                     <p className="font-semibold text-lg mb-1">Download the CaratLane App</p>
-                    <p className="text-sm text-[#5f5f71] mb-4">Shop & Save more on app by redeeming xCLusive points</p>
-                    <div className="flex justify-center gap-4">
-                        <img src="https://freelogopng.com/images/all_img/1664287128google-play-store-logo-png.png" alt="Play Store" className="h-12" />
-                        <img src="https://freelogopng.com/images/all_img/1664287128google-play-store-logo-png.png" alt="Play Store" className="h-12" />
+                    <p className="text-sm text-[#5f5f71] mb-4">
+                        Shop & Save more on app by redeeming xCLusive points
+                    </p>
+                    <div className="flex justify-center gap-4 flex-wrap">
+                        <img src="https://freelogopng.com/images/all_img/1664287128google-play-store-logo-png.png" alt="Play Store"
+                            className="h-12"
+                        />
+                        <img src="https://freelogopng.com/images/all_img/1664287128google-play-store-logo-png.png" alt="App Store"
+                            className="h-12"
+                        />
                     </div>
                 </div>
 
-                {/* bottom icons */}
+
+                {/* buttom icons... */}
                 <div className="mt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[#5f5f71]">
                     <div className="flex gap-6 text-2xl ml-32">
                         <div className="flex gap-4">

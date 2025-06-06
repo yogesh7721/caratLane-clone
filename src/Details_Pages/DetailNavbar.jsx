@@ -51,16 +51,19 @@ const DetailNavbar = () => {
 
     return (
         <div>
-
-
             <div className="w-full px-4 py-4 bg-white">
-                <div className="flex flex-wrap items-center justify-between gap-4">
-                    <img className="w-10 flex-shrink-0" src="https://media.istockphoto.com/id/1408777900/photo/gold-letter-c.jpg?s=612x612&w=0&k=20&c=U1MNQPlxODwsOytlLr3cOP7GLpzSkOuVsJuEJ5r4Ino="
+                <div className="flex flex-wrap items-center justify-between gap-4 lg:gap-6">
+
+                    <img
+                        className="w-10 flex-shrink-0"
+                        src="https://media.istockphoto.com/id/1408777900/photo/gold-letter-c.jpg?s=612x612&w=0&k=20&c=U1MNQPlxODwsOytlLr3cOP7GLpzSkOuVsJuEJ5r4Ino="
                         alt="Logo"
                     />
 
-                    <div className="relative flex-grow min-w-[180px] sm:min-w-[300px] md:min-w-[600px]">
-                        <input onClick={() => setOpen(!open)}
+
+                    <div className="relative flex-grow min-w-[200px] sm:min-w-[300px] lg:min-w-[500px]">
+                        <input
+                            onClick={() => setOpen(!open)}
                             name="myInput"
                             placeholder="Search"
                             className="w-full px-4 py-2 pr-12 border border-pink-400 text-black rounded-lg"
@@ -70,10 +73,9 @@ const DetailNavbar = () => {
                         </div>
                     </div>
 
+
                     <div className="border border-pink-400 rounded-xl h-10 w-16 flex-shrink-0 flex items-center justify-center">
-                        <img className="h-6" src="https://caratlane-live-product-images.s3.ap-south-1.amazonaws.com/media/static/images/discovery/responsive-hamburger-menu/products-and-services/pop-1x.png"
-                            alt="icon"
-                        />
+                        <img className="h-6" src="https://caratlane-live-product-images.s3.ap-south-1.amazonaws.com/media/static/images/discovery/responsive-hamburger-menu/products-and-services/pop-1x.png" alt="icon" />
                     </div>
 
                     <div className="flex items-center gap-1 border border-red-400 rounded-xl h-10 px-4 flex-shrink-0 whitespace-nowrap">
@@ -82,16 +84,12 @@ const DetailNavbar = () => {
                     </div>
 
                     <div className="flex items-center gap-2 border border-pink-400 bg-amber-100 rounded-xl h-10 px-2 flex-shrink-0">
-                        <img className="h-6" src="https://cdn.caratlane.com/static/images/discovery/responsive-hamburger-menu/egold-1x.png"
-                            alt=""
-                        />
+                        <img className="h-6" src="https://cdn.caratlane.com/static/images/discovery/responsive-hamburger-menu/egold-1x.png" alt="" />
                     </div>
 
                     <div className="relative group min-w-[140px] flex-shrink-0">
                         <p className="text-sm text-center">Delivery & Store</p>
-                        <p className="text-pink-400 text-sm font-semibold cursor-pointer text-center">
-                            Enter Pincode
-                        </p>
+                        <p className="text-pink-400 text-sm font-semibold cursor-pointer text-center">Enter Pincode</p>
 
                         <div className="absolute top-full left-0 w-80 bg-white rounded-xl p-6 shadow-2xl opacity-0 translate-y-[-10px] pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-500 ease-in-out z-50">
                             <p className="text-lg text-center font-medium text-gray-700">Your PinCode Unblock</p>
@@ -100,17 +98,16 @@ const DetailNavbar = () => {
                                 <br />
                                 Nearest store and In-store design!
                             </p>
-
                             <div className="flex justify-center mt-4">
                                 <div className="flex flex-col items-center text-center p-2">
                                     {current.icon}
                                     <p className={`font-semibold ${current.textColor}`}>{current.label}</p>
                                 </div>
                             </div>
-
                             <div className="relative w-full max-w-xs mx-auto mt-4">
                                 <FaLocationCrosshairs className="absolute left-3 top-4 text-gray-500 text-sm" />
-                                <input type="text"
+                                <input
+                                    type="text"
                                     placeholder="Enter pincode"
                                     className="w-full border border-gray-300 rounded-md py-3.5 pl-10 pr-10 text-sm"
                                 />
@@ -128,170 +125,56 @@ const DetailNavbar = () => {
                 </div>
             </div>
 
-            {/* navbar component... */}
+            {/* Navbar.... */}
+            <div className="bg-purple-950 flex flex-wrap items-center gap-2 px-2 py-3">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between text-white w-full flex-wrap">
 
-            <div className='bg-purple-950 flex p-2'>
-                <div className='flex flex-col md:flex-row md:items-center md:justify-between text-white w-full'>
 
-                    {isOpen === "ring" ? (
-                        <div className="absolute left-0 right-0 top-full z-50 bg-white shadow-lg p-4 w-screen">
-                            <Rings />
-                        </div>
-                    ) :
-                        isOpen === "earring" ? (
-                            <div className="absolute left-0 right-0 top-full z-50 bg-white shadow-lg p-4 w-screen">
-                                <Earrings />
-                            </div>
-                        ) :
-                            isOpen === "braceletes" ? (
+                    <div className='flex flex-wrap'>
+                        <p onClick={() => navigate("/")} className="px-2 sm:px-5 cursor-pointer font-semibold text-xs hover:text-purple-300 hover:underline hover:decoration-purple-500 hover:decoration-4 hover:underline-offset-6">Home</p>
+                        <p onClick={() => navigate("/filterhome")} className="px-2 sm:px-5 cursor-pointer font-semibold text-xs hover:text-purple-300 hover:underline hover:decoration-purple-500 hover:decoration-4 hover:underline-offset-6">Filter Page</p>
+                        <p onClick={() => navigate("/detailHome")} className="px-2 sm:px-5 cursor-pointer font-semibold text-xs hover:text-purple-300 hover:underline hover:decoration-purple-500 hover:decoration-4 hover:underline-offset-6">Detail Page</p>
+                    </div>
+
+                    {[
+                        "ring", "earring", "braceletes", "solitaires", "mangalsutras",
+                        "necklaces", "jwellery", "silverbyshaya", "gifting", "trending", "collection"
+                    ].map((item) => (
+                        <div
+                            key={item}
+                            className="relative"
+                            onMouseEnter={() => setIsOpen(item)}
+                            onMouseLeave={() => setIsOpen("")}
+                        >
+                            <p className="px-2 sm:px-5 cursor-pointer font-semibold text-xs hover:text-purple-300 hover:underline hover:decoration-purple-500 hover:decoration-4 hover:underline-offset-6 capitalize">{item}</p>
+                            {isOpen === item && (
                                 <div className="absolute left-0 right-0 top-full z-50 bg-white shadow-lg p-4 w-screen">
-                                    <Braceletes_Bangles />
+                                    {item === "ring" && <Rings />}
+                                    {item === "earring" && <Earrings />}
+                                    {item === "braceletes" && <Braceletes_Bangles />}
+                                    {item === "solitaires" && <Solitaires />}
+                                    {item === "mangalsutras" && <Mangalsutras />}
+                                    {item === "necklaces" && <Necklaces_Pendants />}
+                                    {item === "jwellery" && <More_Jwellery />}
+                                    {item === "silverbyshaya" && <Silverby_Shaya />}
+                                    {item === "gifting" && <Gifting />}
+                                    {item === "trending" && <Trending />}
+                                    {item === "collection" && <Collections />}
                                 </div>
-                            ) :
-                                isOpen === "solitaires" ? (
-                                    <div className="absolute left-0 right-0 top-full z-50 bg-white shadow-lg p-4 w-screen">
-                                        <Solitaires />
-                                    </div>
-                                ) :
-                                    isOpen === "mangalsutras" ? (
-                                        <div className="absolute left-0 right-0 top-full z-50 bg-white shadow-lg p-4 w-screen">
-                                            <Mangalsutras />
-                                        </div>
-                                    ) :
-                                        isOpen === "necklaces" ? (
-                                            <div className="absolute left-0 right-0 top-full z-50 bg-white shadow-lg p-4 w-screen">
-                                                <Necklaces_Pendants />
-                                            </div>
-                                        ) :
-                                            isOpen === "jwellery" ? (
-                                                <div className="absolute left-0 right-0 top-full z-50 bg-white shadow-lg p-4 w-screen">
-                                                    <More_Jwellery />
-                                                </div>
-                                            ) :
-                                                isOpen === "silverbyshaya" ? (
-                                                    <div className="absolute left-0 right-0 top-full z-50 bg-white shadow-lg p-4 w-screen">
-                                                        <Silverby_Shaya />
-                                                    </div>
-                                                ) :
-                                                    isOpen === "gifting" ? (
-                                                        <div className="absolute left-0 right-0 top-full z-50 bg-white shadow-lg p-4 w-screen">
-                                                            <Gifting />
-                                                        </div>
-                                                    ) :
-                                                        isOpen === "trending" ? (
-                                                            <div className="absolute left-0 right-0 top-full z-50 bg-white shadow-lg p-4 w-screen">
-                                                                <Trending />
-                                                            </div>
-                                                        ) :
-                                                            isOpen === "collection" ? (
-                                                                <div className="absolute left-0 right-0 top-full z-50 bg-white shadow-lg p-4 w-screen">
-                                                                    <Collections />
-                                                                </div>
-                                                            ) :
-                                                                <></>
-                    }
-                    <div className='flex'>
-                        <p onClick={() => navigate("/")} className="pl-5 cursor-pointer font-semibold text-xs hover:text-purple-300 hover:underline hover:decoration-purple-500 hover:decoration-4 hover:underline-offset-6">
-                            Home
-                        </p>
-                        <p onClick={() => navigate("/filterhome")} className="pl-5 cursor-pointer font-semibold text-xs hover:text-purple-300 hover:underline hover:decoration-purple-500 hover:decoration-4 hover:underline-offset-6">
-                            Filter Page
-                        </p>
-                        <p onClick={() => navigate("/detailHome")} className="pl-5 cursor-pointer font-semibold text-xs hover:text-purple-300 hover:underline hover:decoration-purple-500 hover:decoration-4 hover:underline-offset-6">
-                            Detail Page
-                        </p>
-                    </div>
+                            )}
+                        </div>
+                    ))}
 
-                    <div
-                        className="relative"
-                        onMouseEnter={() => setIsOpen("ring")}
-                        onMouseLeave={() => setIsOpen("")}
-                    >
-                        <p className="pl-5 cursor-pointer font-semibold text-xs hover:text-purple-300 hover:underline hover:decoration-purple-500 hover:decoration-4 hover:underline-offset-6">
-                            Rings
-                        </p>
-                    </div>
-                    <div
-                        className="relative"
-                        onMouseEnter={() => setIsOpen("earring")}
-                        onMouseLeave={() => setIsOpen(false)}
-                    >
-                        <p className="pl-5 cursor-pointer font-semibold text-xs hover:text-purple-300 hover:underline hover:decoration-purple-500 hover:decoration-4 hover:underline-offset-6">
-                            Earings
-                        </p>
-
-                    </div>
-
-                    <div
-                        className="relative"
-                        onMouseEnter={() => setIsOpen("braceletes")}
-                        onMouseLeave={() => setIsOpen("")}>
-
-                        <p className='pl-5 cursor-pointer font-semibold text-xs hover:text-purple-300 hover:underline hover:decoration-purple-500 hover:decoration-4 hover:underline-offset-6' >
-                            Braceletes & Bangles
-                        </p>
-                    </div>
-
-                    <div
-                        className='relative'
-                        onMouseEnter={() => setIsOpen("solitaires")}
-                        onMouseLeave={() => setIsOpen("")}>
-                        <p className='pl-5 cursor-pointer font-semibold text-xs hover:text-purple-300 hover:underline hover:decoration-purple-500 hover:decoration-4 hover:underline-offset-6' >Solitaires</p>
-                    </div>
-
-                    <div
-                        className='relative'
-                        onMouseEnter={() => setIsOpen("mangalsutras")}
-                        onMouseLeave={() => setIsOpen("")}>
-                        <p className='pl-5 cursor-pointer font-semibold text-xs hover:text-purple-300 hover:underline hover:decoration-purple-500 hover:decoration-4 hover:underline-offset-6 '>Mangalsutras</p>
-                    </div>
-                    <div
-                        className='relative'
-                        onMouseEnter={() => setIsOpen("necklaces")}
-                        onMouseLeave={() => setIsOpen("")}>
-                        <p className='pl-5 cursor-pointer font-semibold text-xs hover:text-purple-300 hover:underline hover:decoration-purple-500 hover:decoration-4 hover:underline-offset-6' >NecKlaces & Pendants</p>
-                    </div>
-                    <div
-                        className='relative'
-                        onMouseEnter={() => setIsOpen("jwellery")}
-                        onMouseLeave={() => setIsOpen("")}>
-                        <p className='pl-5 cursor-pointer font-semibold text-xs hover:text-purple-300 hover:underline hover:decoration-purple-500 hover:decoration-4 hover:underline-offset-6' >More Jwellery</p>
-                    </div>
-                    <div
-                        className='relative'
-                        onMouseEnter={() => setIsOpen("silverbyshaya")}
-                        onMouseLeave={() => setIsOpen("")}>
-                        <p className='pl-5 cursor-pointer font-semibold text-xs hover:text-purple-300 hover:underline hover:decoration-purple-500 hover:decoration-4 hover:underline-offset-6' >Silver By Shaya</p>
-                    </div>
-                    <div
-                        className='relative'
-                        onMouseEnter={() => setIsOpen("gifting")}
-                        onMouseLeave={() => setIsOpen("")}>
-                        <p className='pl-5 cursor-pointer font-semibold text-xs hover:text-purple-300 hover:underline hover:decoration-purple-500 hover:decoration-4 hover:underline-offset-6' >Gifting</p>
-                    </div>
-                    <div
-                        className='relative'
-                        onMouseEnter={() => setIsOpen("trending")}
-                        onMouseLeave={() => setIsOpen("")}>
-                        <p className='pl-5 cursor-pointer font-semibold text-xs hover:text-purple-300 hover:underline hover:decoration-purple-500 hover:decoration-4 hover:underline-offset-6' >Trending</p>
-                    </div>
-                    <div
-                        className='relative'
-                        onMouseEnter={() => setIsOpen("collection")}
-                        onMouseLeave={() => setIsOpen("")}>
-                        <p className='pl-5 cursor-pointer font-semibold text-xs hover:text-purple-300 hover:underline hover:decoration-purple-500 hover:decoration-4 hover:underline-offset-6' >Collections</p>
-                    </div>
-
-
-                    {/* select box.... */}
+                    {/* Dropdown */}
+                    <select className='border rounded-sm ml-auto text-black bg-white  w-full sm:w-40 md:w-48 px-3 py-2 mt-2 md:mt-0'>
+                        <option className='text-black'>Services</option>
+                        <option className='text-black'>Try at Home</option>
+                        <option className='text-black'>Video Call</option>
+                    </select>
                 </div>
-                <select className=' flex  border rounded-sm ml-35   text-black w-full   bg-white l sm:w-40 md:w-48 px-3 py-2' >
-                    <option className='text-black pl-10 '>Services</option>
-                    <option className='text-black pl-10 '>Try at Home</option>
-                    <option className='text-black pl-10 '>Video Call</option>
-                </select>
             </div>
-        </div >
+
+        </div>
     )
 }
 

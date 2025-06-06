@@ -8,19 +8,20 @@ const Braceletes_Bangles = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
-      {/* Rings */}
       <div>
-        <div className="flex justify-between mt-2 bg-white text-black p-6 rounded shadow relative">
-          <div>
+        <div className="flex justify-between mt-2 bg-white text-black p-6 rounded shadow relative flex-wrap gap-6 xl:gap-0">
+
+          <div className="w-full sm:w-1/2 md:w-auto">
             <p className='font-bold text-blue-400 text-xl'>Feactured</p>
             <p>Latest Design</p>
             <p>Bestsellers</p>
             <p>Fast Delivery</p>
             <p>Special Deals</p>
           </div>
-          <div>
+
+          <div className="w-full sm:w-1/2 md:w-auto">
             <p className='font-bold text-blue-400 text-xl'>By Style</p>
-            <p className='font-bold text-black'>All Brafcelets & Bangles</p>
+            <p className='font-bold text-black'>All Bracelets & Bangles</p>
             <p>Adjustable Bracelets</p>
             <p>Chain Bracelets</p>
             <p>Flexible Bracelets</p>
@@ -28,52 +29,24 @@ const Braceletes_Bangles = () => {
             <p>Bridal Bangles</p>
             <p>Lightweight Bangles</p>
             <p>Silver Bracelets</p>
+          </div>
 
+          <div className="w-full sm:w-1/2 md:w-auto">
+            <p className='font-bold text-blue-400 text-xl'>By Metal & Stone</p>
+
+            <div className='flex gap-1 mt-2'><IoDiamond className='mt-1' /><p>Diamond</p></div>
+            <div className='flex gap-1 mt-2'><GiKaleidoscopePearls className='mt-1' /><p>Pearl</p></div>
+            <div className='flex gap-1 mt-2'><GiOysterPearl className='mt-1' /><p>Navratan</p></div>
+            <div className='flex gap-1 mt-2'><BsSuitDiamond className='mt-1' /><p>GameStone</p></div>
+            <div className='flex gap-1 mt-2'><GiFlatPlatform className='mt-1' /><p>Platinum</p></div>
+            <div className='flex gap-1 mt-2'><GiGoldBar className='mt-1' /><p>Gold</p></div>
+            <div className='flex gap-1 mt-2'><AiTwotoneGold className='mt-1' /><p>Rose Gold</p></div>
+            <div className='flex gap-1 mt-2'><AiFillGolden className='mt-1' /><p>Yellow Gold</p></div>
+            <div className='flex gap-1 mt-2'><AiFillGolden className='mt-1' /><p>White Gold</p></div>
+            <div className='flex gap-1 mt-2'><AiFillGolden className='mt-1' /><p>22KT Gold</p></div>
           </div>
-          <div className='items-center'>
-            <p className='font-bold text-blue-400 text-xl'> By Metal & Stone</p>
-            <div className='flex gap-1 mt-2'>
-              <IoDiamond className='mt-1' />
-              <p >Diamond</p>
-            </div>
-            <div className='flex gap-1 mt-2'>
-              <GiKaleidoscopePearls className='mt-1' />
-              <p>Pearl</p>
-            </div>
-            <div className='flex gap-1 mt-2'>
-              <GiOysterPearl className='mt-1' />
-              <p>Navratan</p>
-            </div>
-            <div className='flex gap-1 mt-2'>
-              <BsSuitDiamond className='mt-1' />
-              <p>GameStone</p>
-            </div>
-            <div className='flex gap-1 mt-2'>
-              <GiFlatPlatform className='mt-1' />
-              <p>Platinum</p>
-            </div>
-            <div className='flex gap-1 mt-2'>
-              <GiGoldBar className='mt-1' />
-              <p>Gold</p>
-            </div>
-            <div className='flex gap-1 mt-2'>
-              <AiTwotoneGold className='mt-1' />
-              <p>Rose Gold</p>
-            </div>
-            <div className='flex gap-1 mt-2'>
-              <AiFillGolden className='mt-1' />
-              <p>Yellow Gold</p>
-            </div>
-            <div className='flex gap-1 mt-2'>
-              <AiFillGolden className='mt-1' />
-              <p>White Gold</p>
-            </div>
-            <div className='flex gap-1 mt-2'>
-              <AiFillGolden className='mt-1' />
-              <p>22KT Gold</p>
-            </div>
-          </div>
-          <div className='text-center'>
+
+          <div className="w-full sm:w-1/2 md:w-auto text-center">
             <p className='font-bold text-blue-400 text-xl'>By Price</p>
             <p>Under ₹ 10k</p>
             <p>₹ 10k -₹ 20k</p>
@@ -81,28 +54,28 @@ const Braceletes_Bangles = () => {
             <p>₹ 30k -₹ 50k</p>
             <p>₹ 50k -₹ 75k</p>
             <p>Above ₹ 75k </p>
-
           </div>
 
-          <div className=' relative flex gap-4 mr-10'>
+          <div className='relative flex flex-wrap justify-center md:justify-end gap-4 w-full md:w-auto'>
             <div className="bg-white rounded-xl shadow-md overflow-hidden w-64">
               <div className="relative w-full h-64 bg-gradient-to-br from-pink-300 to-purple-300 flex items-center justify-center">
                 <img
                   src='https://cdn.caratlane.com/media/static/images/V4/2025/CL/02-FEB/Banner/New_Website/MenuBar/Desktop_01/MenuBar_Desktop_SB.jpg'
-                  alt=""
-                  className="object-cover w-full"
+                  alt="Stretchable Bangles"
+                  className="object-cover w-full h-full"
                 />
               </div>
               <div className="p-2 text-center">
                 <h3 className="text-gray-600 text-lg font-medium">Stretchable Bangles</h3>
               </div>
             </div>
+
             <div className="bg-white rounded-xl shadow-md overflow-hidden w-64">
               <div className="relative w-full h-64 bg-gradient-to-br from-pink-300 to-purple-300 flex items-center justify-center">
                 <img
                   src='https://cdn.caratlane.com/media/static/images/V4/2025/CL/02-FEB/Banner/New_Website/MenuBar/Desktop_01/MenuBar_Desktop_WC.jpg'
-                  alt=""
-                  className="object-cover w-full"
+                  alt="Watch Charms"
+                  className="object-cover w-full h-full"
                 />
               </div>
               <div className="p-2 text-center">
@@ -112,19 +85,15 @@ const Braceletes_Bangles = () => {
           </div>
         </div>
 
-        {/* Bottom Paraph */}
         <div className="mt-7 px-6">
-          <div className="flex gap-10 items-center">
+          <div className="flex flex-wrap gap-6 items-center">
             <p className="text-gray-700 font-medium">For Women</p>
             <div className="h-6 border-l border-gray-400"></div>
             <p className="text-gray-700 font-medium">For Men</p>
             <div className="h-6 border-l border-gray-400"></div>
             <p className="text-gray-700 font-medium">For Kids</p>
-            <div className="h-6 border-l border-gray-400"></div>
           </div>
         </div>
-
-
       </div>
     </div>
   )
